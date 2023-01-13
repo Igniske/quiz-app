@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    display: flex;
+    flex-direction: column;
+    background-color: #452c63;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+    color: white;
+}
+
+.caja-ext{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: 2px black solid;
+    box-shadow: inset;
+    width: 60%;
+    height: 400px;
+    background-color: white;
+}
+
+.caja-int{
+    width: 50%;
+}
+
+.descripcion{
+    justify-content: center;
+    font-size: 25px;
+    margin: 40px 0 75px 0;
+}
+
+button{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+}
+
+.centrar{
+    display: flex;
+    margin: auto;
+    width: 20%;
+}
+
+h3{
+    margin: 10px 0 20px 0;
+}
+
+.pregunta-quiz{
+    margin: 10px 0 15px 0;
+    font-weight: 600;
+}
+
+.pregunta{
+    margin: 0 10px 17px 10px;
+    border: 2px black solid;
+    padding: 3px;
+}
+
+
+.correct{
+    background-color: green;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+.incorrect{
+    background-color: brown;
+    animation: shake 0.25s;
+    animation-iteration-count: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+    list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (max-width: 720px){
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .App{
+       height: 100vh;
+    }
+
+    .titulo{
+        margin-top: 75px;
+        margin-bottom: 25px;
+    }
+
+    .caja-ext{
+        height: 375px;
+    }
+
+    .caja-int{
+        width: 80%;
+    }
+
+    button{
+        margin: 0 0 20px 0;
+    }
+    .descripcion{
+        font-size: 30px;
+    }
 }
